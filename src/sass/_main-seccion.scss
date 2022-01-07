@@ -1,0 +1,151 @@
+@import 'mixin';
+@import 'media-queries';
+
+.main-seccion {
+  display: grid;
+  grid-template-areas: "a a a a b b ";
+  background-color: $dark;
+  min-height: 85vh;
+  
+  @include mobile {
+  }
+
+  //TODO: delete test color
+  color: #fff;
+
+  .left {
+    grid-column: a;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .cronometro {
+      background-color: $secondary;
+      margin-top: $main-padding;
+      padding: 40px 20px 10px;
+      width: 300px;
+      height: $height-cronometro;
+      border-radius: 15px 0 0 15px;
+      border: 2px solid black;
+      border-right: none;
+
+      &__time {
+        text-align: center;
+        font-size: 4rem;
+        margin-bottom: 30px;
+      }
+
+      &__container-btns {
+        display: flex;
+        justify-content: center;
+      }
+
+      &__btn {
+        outline: none;
+        border: 2px solid transparent;
+        width: 60px;
+        height: 35px;
+        margin: auto 5px;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &--stop {
+          // @include setCustomColorBtn(rgb(255, 212, 199));
+          @include setCustomColorBtn(rgb(199, 199, 255));
+        }
+
+        &--start {
+          // @include setCustomColorBtn(rgb(204, 255, 230));
+          @include setCustomColorBtn(rgb(199, 199, 255));
+        }
+
+        &--reset {
+          @include setCustomColorBtn(rgb(199, 199, 255)); //TODO: todos de este colot quedan bien
+        }
+
+        &--mark {
+          // @include setCustomColorBtn(rgb(255, 231, 200));
+          @include setCustomColorBtn(rgb(199, 199, 255));
+        }
+      }
+    }
+
+    .estadisticas {
+      margin-top: $main-padding;
+      border-radius: 0 15px 15px 0;
+      border: 2px solid black;
+      border-left: none;
+      width: 150px;
+      height: 210px;
+      padding-top: 20px;
+      background-color: lighten($secondary, 15%);
+      
+      &__title {
+        font-size: 1.3rem;
+        color: $dark-text;
+        text-align: center;
+      }
+
+      &__list {
+        margin-top: 10px;
+        width: 100%;
+        height: 70%;
+        padding: 4px 20px 4px 15px;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: $secondary lighten($secondary, 35%);
+
+        &::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+          background-color: lighten($secondary, 35%);
+          border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color:  $secondary;
+          border-radius: 10px;	
+          background-image: -webkit-linear-gradient(45deg,
+            rgba(255, 255, 255, .2) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, .2) 50%,
+            rgba(255, 255, 255, .2) 75%,
+            transparent 75%,
+            transparent);
+        }
+
+        &__item {
+          font-size: .94rem;
+          color: $dark-text;
+          border-bottom: 1px dotted $dark;
+          margin-bottom: 9px;
+        }
+      }
+    }
+  }
+
+  .rigth {
+    grid-column: b;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-shadow: 4px 3px 16px rgba(10,45,255,0.6);
+
+    //TODO: Agregar border naranja/azul neon al texto 
+    &__title {
+      font-size: 4rem;
+      // margin-top: calc($main-padding * 1px + ($height-cronometro * 2/3) * 1px);
+      margin-top: $main-padding + 20px;
+    }
+
+    &__text {
+      font-size: 1.5rem;
+      //TODO: obtener el width de un elemento especifico (parrao sobre el) y ubicarlo en la mitad
+      margin-top: 15px;
+    }
+  }
+}

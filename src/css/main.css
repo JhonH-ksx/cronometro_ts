@@ -1,0 +1,203 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  min-height: max-content;
+  height: 90px;
+  background-color: #212325; }
+  .header__btn {
+    background-color: #c6ffce;
+    padding: 6px 13px;
+    color: #152535;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transform-origin: left top;
+    transform: rotate(30deg); }
+
+.main-seccion {
+  display: grid;
+  grid-template-areas: "a a a a b b ";
+  background-color: #212325;
+  min-height: 85vh;
+  color: #fff; }
+  .main-seccion .left {
+    grid-column: a;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; }
+    .main-seccion .left .cronometro {
+      background-color: #6d8ce2;
+      margin-top: 170px;
+      padding: 40px 20px 10px;
+      width: 300px;
+      height: 210px;
+      border-radius: 15px 0 0 15px;
+      border: 2px solid black;
+      border-right: none; }
+      .main-seccion .left .cronometro__time {
+        text-align: center;
+        font-size: 4rem;
+        margin-bottom: 30px; }
+      .main-seccion .left .cronometro__container-btns {
+        display: flex;
+        justify-content: center; }
+      .main-seccion .left .cronometro__btn {
+        outline: none;
+        border: 2px solid transparent;
+        width: 60px;
+        height: 35px;
+        margin: auto 5px;
+        border-radius: 4px;
+        cursor: pointer; }
+        .main-seccion .left .cronometro__btn--stop {
+          transition: .3s background-color ease-out; }
+          .main-seccion .left .cronometro__btn--stop:hover {
+            background-color: #c7c7ff; }
+          .main-seccion .left .cronometro__btn--stop:focus {
+            background-color: #c7c7ff;
+            border-color: #7b7bff; }
+        .main-seccion .left .cronometro__btn--start {
+          transition: .3s background-color ease-out; }
+          .main-seccion .left .cronometro__btn--start:hover {
+            background-color: #c7c7ff; }
+          .main-seccion .left .cronometro__btn--start:focus {
+            background-color: #c7c7ff;
+            border-color: #7b7bff; }
+        .main-seccion .left .cronometro__btn--reset {
+          transition: .3s background-color ease-out; }
+          .main-seccion .left .cronometro__btn--reset:hover {
+            background-color: #c7c7ff; }
+          .main-seccion .left .cronometro__btn--reset:focus {
+            background-color: #c7c7ff;
+            border-color: #7b7bff; }
+        .main-seccion .left .cronometro__btn--mark {
+          transition: .3s background-color ease-out; }
+          .main-seccion .left .cronometro__btn--mark:hover {
+            background-color: #c7c7ff; }
+          .main-seccion .left .cronometro__btn--mark:focus {
+            background-color: #c7c7ff;
+            border-color: #7b7bff; }
+    .main-seccion .left .estadisticas {
+      margin-top: 170px;
+      border-radius: 0 15px 15px 0;
+      border: 2px solid black;
+      border-left: none;
+      width: 150px;
+      height: 210px;
+      padding-top: 20px;
+      background-color: #adbeef; }
+      .main-seccion .left .estadisticas__title {
+        font-size: 1.3rem;
+        color: #152535;
+        text-align: center; }
+      .main-seccion .left .estadisticas__list {
+        margin-top: 10px;
+        width: 100%;
+        height: 70%;
+        padding: 4px 20px 4px 15px;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: #6d8ce2 white; }
+        .main-seccion .left .estadisticas__list::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          background-color: white;
+          border-radius: 10px; }
+        .main-seccion .left .estadisticas__list::-webkit-scrollbar {
+          width: 10px; }
+        .main-seccion .left .estadisticas__list::-webkit-scrollbar-thumb {
+          background-color: #6d8ce2;
+          border-radius: 10px;
+          background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent); }
+        .main-seccion .left .estadisticas__list__item {
+          font-size: .94rem;
+          color: #152535;
+          border-bottom: 1px dotted #212325;
+          margin-bottom: 9px; }
+  .main-seccion .rigth {
+    grid-column: b;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-shadow: 4px 3px 16px rgba(10, 45, 255, 0.6); }
+    .main-seccion .rigth__title {
+      font-size: 4rem;
+      margin-top: 190px; }
+    .main-seccion .rigth__text {
+      font-size: 1.5rem;
+      margin-top: 15px; }
+
+.footer {
+  background-color: #212325;
+  min-height: 6vh; }
+  .footer__ref {
+    text-align: center;
+    color: #5d6368;
+    font-size: 18px; }
+  .footer__author {
+    text-decoration: none;
+    color: #57c5c5; }
+
+body, *, *::after, *::before, html {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  user-select: none; }
+
+body {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  scrollbar-color: #6d8ce2 white; }
+  body::-webkit-scrollbar-track {
+    background-color: #45494d; }
+  body::-webkit-scrollbar {
+    width: 10px; }
+  body::-webkit-scrollbar-thumb {
+    background-color: gray; }

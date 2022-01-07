@@ -1,0 +1,24 @@
+@import 'variables';
+@import 'media-queries';
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  min-height: max-content;
+  height: 90px;
+
+  //TODO: test color delete
+  background-color: $dark;
+
+  &__btn {
+    background-color: $ligth;
+    padding: 6px 13px;
+    color: $dark-text;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transform-origin: left top;
+    transform: rotate(30deg);
+  }
+}

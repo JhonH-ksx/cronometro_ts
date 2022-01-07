@@ -1,0 +1,22 @@
+@import 'reset';
+@import 'header';
+@import 'main-seccion';
+@import 'footer';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body, *, *::after, *::before, html {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  scrollbar-color: $secondary lighten($secondary, 35%);
+
+  &::-webkit-scrollbar-track { background-color: lighten($dark, 15%); }
+  &::-webkit-scrollbar { width: 10px; }
+  &::-webkit-scrollbar-thumb { background-color:gray; }
+}
+

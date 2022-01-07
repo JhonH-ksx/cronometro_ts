@@ -1,0 +1,17 @@
+@import 'variables';
+
+.footer {
+  background-color: $dark;
+  min-height: 6vh;
+
+  &__ref {
+    text-align: center;
+    color: lighten($dark, 25%);
+    font-size: 18px;
+  }
+
+  &__author {
+    text-decoration: none;
+    color: rgb(87, 197, 197);
+  }
+}

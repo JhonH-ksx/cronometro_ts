@@ -1,0 +1,16 @@
+{
+  "name": "cronometro_ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "sass": "node-sass src/sass/ -o src/css/",
+    "ts": "npx tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sweetalert2": "^11.3.3"
+  }
+}
