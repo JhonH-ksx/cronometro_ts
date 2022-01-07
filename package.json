@@ -5,12 +5,15 @@
   "main": "src/index.js",
   "scripts": {
     "sass": "node-sass src/sass/ -o src/css/",
-    "ts": "npx tsc"
+    "ts": "npx tsc",
+    "deploy": "gh-page -d src/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "sweetalert2": "^11.3.3"
-  }
+  },
+  "homepage": "https://jhonh-ksx.github.io/cronometro_ts/"
 }
