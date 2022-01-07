@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="any"/>
+  <title>Cronómetro</title>
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="header__btn">View on GitHub</a>
+  </header>
+
+  <main class="main-seccion">
+    <div class="left">
+      <div class="cronometro">
+        <h2 class="cronometro__time">00:00</h2>
+        <div class="cronometro__container-btns">
+          <button type="button" class="cronometro__btn cronometro__btn--stop">stop</button>
+          <button type="button" class="cronometro__btn cronometro__btn--start">start</button>
+          <button type="button" class="cronometro__btn cronometro__btn--reset">reset</button>
+          <button type="button" class="cronometro__btn cronometro__btn--mark">mark</button>
+        </div>
+      </div> <!-- cronometro -->
+      <div class="estadisticas">
+        <h3 class="estadisticas__title">Estadísticas</h3>
+        <ol class="estadisticas__list" overflow></ol>
+      </div>
+    </div> <!-- .left -->
+  
+    <div class="rigth">
+      <h2 class="rigth__title">Vamos, tenemos prisa.</h2>
+      <p class="rigth__text">Mide tu velocidad haciendo cosas.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__ref">Diseñado por <a href="#" class="footer__author">Jhon Hernández</a></p>
+  </footer>
+
+  <script src="js/cronometro.js"></script>
+  <script src="js/estadisticas.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

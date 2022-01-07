@@ -1,0 +1,12 @@
+@mixin setCustomColorBtn($my-color) {
+  transition: .3s background-color ease-out;
+
+  &:hover {
+    background-color: $my-color;
+  }
+  
+  &:focus {
+    background-color: $my-color;
+    border-color: darken($my-color, 15%);
+  }
+}
